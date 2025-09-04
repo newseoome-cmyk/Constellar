@@ -12,12 +12,16 @@ const ConstellationToDoApp = () => {
   const [celebrationQuest, setCelebrationQuest] = useState(null);
   const [player, setPlayer] = useState({
     name: 'Explorer',
-    level: 1,
-    totalExp: 0,
-    coins: 0,
-    completedQuests: [],
-    comments: {},
-    streaks: {},
+    level: 4,
+    totalExp: 1850,
+    coins: 280,
+    completedQuests: ['morning_coffee', 'daily_reading', 'workout_basic'],
+    comments: {
+      'morning_coffee': 'Such a peaceful way to start the day! Really helps me focus.',
+      'daily_reading': 'Finished an amazing chapter about productivity. Feeling inspired!',
+      'workout_basic': 'Felt great after 30 minutes of cardio. Energy boost for the whole day!'
+    },
+    streaks: { morning_coffee: 15, daily_reading: 8, workout_basic: 5 },
     inventory: ['basic_theme'],
     equippedTheme: 'basic_theme',
     customQuests: {},
@@ -1707,6 +1711,19 @@ const ConstellationToDoApp = () => {
 
       {/* Enhanced Keyframes and Styles */}
       <style jsx>{`
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          height: 100vh;
+          width: 100vw;
+        }
+        
+        #root {
+          height: 100vh;
+          width: 100vw;
+        }
+        
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
