@@ -1023,6 +1023,45 @@ const ConstellationToDoApp = () => {
   };
 
   // Constellation Map Component
+  
+    const allQuests = [];
+    
+    // Collect all quests from all constellations with their positions
+    Object.entries(constellations).forEach(([constKey, constellation]) => {
+      // Add constellation center
+      allQuests.push({
+        id: `constellation_${constKey}`,
+        name: constellation.name,
+        isConstellation: true,
+        constellation: constKey,
+        position: constellation.position,
+        icon: constellation.icon,
+        color: constellation.color,
+        category: constellation.category
+      });
+      
+      // Add constellation quests
+      constellation.quests.forEach(quest => {
+        allQuests.push({
+          ...quest,
+          constellation: constKey,
+          isConstellation: false
+        });
+      });
+    });
+
+    // Add custom quests
+    Object.entries(player.customQuests).forEach(([constKey, quests]) => {
+      quests.forEach(quest => {
+        allQuests.push({
+          ...quest,
+          constellation: constKey,
+          isConstellation: false
+        });
+      });
+    });
+
+  // Constellation Map Component
   const ConstellationMap = () => {
     const allQuests = [];
     
@@ -1062,7 +1101,7 @@ const ConstellationToDoApp = () => {
     });
 
     return (
-      <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gradient-to-br from-slate-900/50 to-purple-900/50 rounded-2xl sm:rounded-3xl border border-white/10 overflow-hidden">
+      <div className="relative w-full h-80 sm:h-96 md:h-[28rem] lg:h-[500px] bg-gradient-to-br from-slate-900/50 to-purple-900/50 rounded-2xl sm:rounded-3xl border border-white/10 overflow-hidden">
         {/* Background stars */}
         {[...Array(30)].map((_, i) => (
           <div
@@ -1716,11 +1755,28 @@ const ConstellationToDoApp = () => {
           overflow-x: hidden;
           height: 100vh;
           width: 100vw;
+          touch-action: manipulation; /* Prevents zoom on mobile */
         }
         
         #root {
           height: 100vh;
           width: 100vw;
+        }
+        
+        /* Improve touch targets on mobile */
+        @media (max-width: 640px) {
+          .cursor-pointer {
+            min-height: 44px;
+            min-width: 44px;
+          }
+        }
+        
+        /* Better tap highlights */
+        * {
+          -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          user-select: none;
         }
         
         .scrollbar-hide {
