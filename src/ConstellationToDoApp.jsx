@@ -12,16 +12,12 @@ const ConstellationToDoApp = () => {
   const [celebrationQuest, setCelebrationQuest] = useState(null);
   const [player, setPlayer] = useState({
     name: 'Explorer',
-    level: 4,
-    totalExp: 1850,
-    coins: 280,
-    completedQuests: ['morning_coffee', 'daily_reading', 'workout_basic'],
-    comments: {
-      'morning_coffee': 'Such a peaceful way to start the day! Really helps me focus.',
-      'daily_reading': 'Finished an amazing chapter about productivity. Feeling inspired!',
-      'workout_basic': 'Felt great after 30 minutes of cardio. Energy boost for the whole day!'
-    },
-    streaks: { morning_coffee: 15, daily_reading: 8, workout_basic: 5 },
+    level: 1,
+    totalExp: 0,
+    coins: 0,
+    completedQuests: [],
+    comments: {},
+    streaks: {},
     inventory: ['basic_theme'],
     equippedTheme: 'basic_theme',
     customQuests: {},
@@ -1143,10 +1139,13 @@ const ConstellationToDoApp = () => {
                 }
               }}
             >
+              {/* Larger touch area for mobile */}
+              <div className="absolute inset-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+              
               {/* Node glow effect */}
               <div 
                 className={`absolute inset-0 rounded-full animate-pulse ${
-                  isConstellation ? 'w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20' : 'w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12'
+                  isConstellation ? 'w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24' : 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16'
                 }`}
                 style={{
                   background: `radial-gradient(circle, ${quest.color || '#06b6d4'}40, transparent)`,
@@ -1155,14 +1154,14 @@ const ConstellationToDoApp = () => {
                 }}
               />
               
-              {/* Main node */}
+              {/* Main node - Made bigger for mobile */}
               <div
                 className={`relative rounded-full border-2 sm:border-4 transition-all duration-300 hover:scale-110 flex items-center justify-center shadow-2xl ${
                   isConstellation 
-                    ? 'w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 border-white/50' 
+                    ? 'w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-white/50' 
                     : isCompleted 
-                      ? 'w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 border-green-400 bg-green-500/80' 
-                      : 'w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 border-white/40 bg-white/10 hover:bg-white/20'
+                      ? 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-green-400 bg-green-500/80' 
+                      : 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-white/40 bg-white/10 hover:bg-white/20'
                 }`}
                 style={{
                   backgroundColor: isConstellation ? `${quest.color}80` : undefined,
@@ -1170,33 +1169,33 @@ const ConstellationToDoApp = () => {
                   boxShadow: `0 0 ${isConstellation ? '30px' : '20px'} ${quest.color || '#06b6d4'}40`
                 }}
               >
-                {/* Icon */}
+                {/* Icon - Made bigger */}
                 <quest.icon 
-                  className={`${isConstellation ? 'w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8' : 'w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5'} text-white`}
+                  className={`${isConstellation ? 'w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10' : 'w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7'} text-white`}
                   style={{ 
                     color: isCompleted && !isConstellation ? '#ffffff' : quest.color || '#ffffff'
                   }}
                 />
                 
-                {/* Completion checkmark */}
+                {/* Completion checkmark - Made bigger */}
                 {isCompleted && !isConstellation && (
-                  <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
-                    <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-white" />
+                  <div className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 w-4 h-4 sm:w-5 sm:h-5 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
+                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
                 )}
                 
-                {/* Streak indicator */}
+                {/* Streak indicator - Made bigger */}
                 {streak > 0 && !isConstellation && (
-                  <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-1 sm:px-2 py-0.5 sm:py-1 flex items-center gap-1 shadow-lg">
-                    <Flame className="w-2 h-2 sm:w-3 sm:h-3 text-white" />
-                    <span className="text-xs font-bold text-white">{streak}</span>
+                  <div className="absolute -bottom-1.5 -right-1.5 sm:-bottom-2 sm:-right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-2 sm:px-2.5 py-1 sm:py-1.5 flex items-center gap-1 shadow-lg">
+                    <Flame className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
+                    <span className="text-xs sm:text-sm font-bold text-white">{streak}</span>
                   </div>
                 )}
                 
-                {/* Comment indicator */}
+                {/* Comment indicator - Made bigger */}
                 {hasComment && !isConstellation && (
-                  <div className="absolute -top-1 -left-1 sm:-top-2 sm:-left-2 w-3 h-3 sm:w-4 sm:h-4 bg-purple-500 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-2 h-2 sm:w-3 sm:h-3 text-white" />
+                  <div className="absolute -top-1.5 -left-1.5 sm:-top-2 sm:-left-2 w-4 h-4 sm:w-5 sm:h-5 bg-purple-500 rounded-full flex items-center justify-center">
+                    <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
                 )}
               </div>
