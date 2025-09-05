@@ -4,7 +4,7 @@ import { Star, Trophy, Zap, Target, Calendar, Gift, Users, Settings, X, Play, He
 const ConstellationToDoApp = () => {
   const [gameStarted, setGameStarted] = useState(false);
   const [showMascot, setShowMascot] = useState(true);
-  const [mascotMessage, setMascotMessage] = useState("Ready to explore the stars together? ✨");
+  const [mascotMessage, setMascotMessage] = useState("Ready to explore the stars together?");
   const [username, setUsername] = useState('');
   const [showGuide, setShowGuide] = useState(false);
   const [showShop, setShowShop] = useState(false);
@@ -112,12 +112,12 @@ const ConstellationToDoApp = () => {
 
   // Mascot messages
   const mascotMessages = [
-    "You're doing amazing! Keep up the great work! 🌟",
-    "Every quest completed brings you closer to your goals! 🚀",
-    "I believe in you! Let's conquer today together! 💪",
-    "Your dedication is inspiring! ✨",
-    "Ready for another adventure? 🌙",
-    "You're building incredible habits! 🏆"
+    "You're doing amazing! Keep up the great work!",
+    "Every quest completed brings you closer to your goals!",
+    "I believe in you! Let's conquer today together!",
+    "Your dedication is inspiring!",
+    "Ready for another adventure?",
+    "You're building incredible habits!"
   ];
 
   // Enhanced constellation quest data with categorization
@@ -127,7 +127,6 @@ const ConstellationToDoApp = () => {
       icon: Heart,
       color: '#ec4899',
       description: 'Nurture your mind and body',
-      position: { x: 50, y: 20 },
       category: 'Personal Growth',
       quests: [
         { 
@@ -192,7 +191,6 @@ const ConstellationToDoApp = () => {
       icon: Dumbbell,
       color: '#f97316',
       description: 'Build strength and vitality',
-      position: { x: 85, y: 35 },
       category: 'Physical Health',
       quests: [
         { 
@@ -200,7 +198,7 @@ const ConstellationToDoApp = () => {
           name: 'Basic workout routine', 
           exp: 50, 
           icon: Dumbbell, 
-          position: { x: 70, y: 20 },
+          position: { x: 30, y: 25 },
           category: 'Strength Training',
           difficulty: 'Medium',
           timeEstimate: '30 min',
@@ -211,7 +209,7 @@ const ConstellationToDoApp = () => {
           name: 'Drink 8 glasses of water', 
           exp: 25, 
           icon: Target, 
-          position: { x: 90, y: 25 },
+          position: { x: 70, y: 25 },
           category: 'Nutrition',
           difficulty: 'Easy',
           timeEstimate: 'All day',
@@ -222,7 +220,7 @@ const ConstellationToDoApp = () => {
           name: 'Walk 10,000 steps', 
           exp: 40, 
           icon: Target, 
-          position: { x: 95, y: 45 },
+          position: { x: 80, y: 45 },
           category: 'Cardio',
           difficulty: 'Medium',
           timeEstimate: '60 min',
@@ -233,7 +231,7 @@ const ConstellationToDoApp = () => {
           name: 'Stretch for 15 minutes', 
           exp: 30, 
           icon: Dumbbell, 
-          position: { x: 80, y: 55 },
+          position: { x: 20, y: 55 },
           category: 'Flexibility',
           difficulty: 'Easy',
           timeEstimate: '15 min',
@@ -244,7 +242,7 @@ const ConstellationToDoApp = () => {
           name: 'Cook a healthy meal', 
           exp: 45, 
           icon: Heart, 
-          position: { x: 75, y: 45 },
+          position: { x: 50, y: 70 },
           category: 'Nutrition',
           difficulty: 'Medium',
           timeEstimate: '45 min',
@@ -257,7 +255,6 @@ const ConstellationToDoApp = () => {
       icon: BookOpen,
       color: '#3b82f6',
       description: 'Expand your knowledge',
-      position: { x: 85, y: 65 },
       category: 'Education',
       quests: [
         { 
@@ -265,7 +262,7 @@ const ConstellationToDoApp = () => {
           name: 'Practice new skill', 
           exp: 60, 
           icon: Target, 
-          position: { x: 75, y: 75 },
+          position: { x: 25, y: 30 },
           category: 'Skill Development',
           difficulty: 'Hard',
           timeEstimate: '45 min',
@@ -276,7 +273,7 @@ const ConstellationToDoApp = () => {
           name: 'Complete course module', 
           exp: 80, 
           icon: BookOpen, 
-          position: { x: 90, y: 70 },
+          position: { x: 75, y: 30 },
           category: 'Formal Learning',
           difficulty: 'Hard',
           timeEstimate: '60 min',
@@ -287,7 +284,7 @@ const ConstellationToDoApp = () => {
           name: 'Listen to educational podcast', 
           exp: 35, 
           icon: Play, 
-          position: { x: 95, y: 55 },
+          position: { x: 80, y: 55 },
           category: 'Passive Learning',
           difficulty: 'Easy',
           timeEstimate: '30 min',
@@ -298,7 +295,7 @@ const ConstellationToDoApp = () => {
           name: 'Read industry article', 
           exp: 40, 
           icon: BookOpen, 
-          position: { x: 70, y: 55 },
+          position: { x: 20, y: 55 },
           category: 'Knowledge',
           difficulty: 'Medium',
           timeEstimate: '20 min',
@@ -309,7 +306,7 @@ const ConstellationToDoApp = () => {
           name: 'Review and organize notes', 
           exp: 25, 
           icon: Star, 
-          position: { x: 80, y: 80 },
+          position: { x: 50, y: 75 },
           category: 'Organization',
           difficulty: 'Easy',
           timeEstimate: '15 min',
@@ -322,7 +319,6 @@ const ConstellationToDoApp = () => {
       icon: Palette,
       color: '#8b5cf6',
       description: 'Express your artistic side',
-      position: { x: 15, y: 65 },
       category: 'Creative Expression',
       quests: [
         { 
@@ -330,7 +326,7 @@ const ConstellationToDoApp = () => {
           name: 'Write creatively for 30 min', 
           exp: 55, 
           icon: Palette, 
-          position: { x: 25, y: 75 },
+          position: { x: 25, y: 35 },
           category: 'Writing',
           difficulty: 'Medium',
           timeEstimate: '30 min',
@@ -341,7 +337,7 @@ const ConstellationToDoApp = () => {
           name: 'Take artistic photos', 
           exp: 40, 
           icon: Target, 
-          position: { x: 10, y: 70 },
+          position: { x: 75, y: 35 },
           category: 'Photography',
           difficulty: 'Medium',
           timeEstimate: '20 min',
@@ -352,7 +348,7 @@ const ConstellationToDoApp = () => {
           name: 'Draw or sketch something', 
           exp: 45, 
           icon: Palette, 
-          position: { x: 5, y: 55 },
+          position: { x: 15, y: 60 },
           category: 'Visual Art',
           difficulty: 'Medium',
           timeEstimate: '25 min',
@@ -363,7 +359,7 @@ const ConstellationToDoApp = () => {
           name: 'Practice musical instrument', 
           exp: 50, 
           icon: Star, 
-          position: { x: 30, y: 55 },
+          position: { x: 85, y: 60 },
           category: 'Music',
           difficulty: 'Medium',
           timeEstimate: '30 min',
@@ -374,7 +370,7 @@ const ConstellationToDoApp = () => {
           name: 'Work on craft project', 
           exp: 60, 
           icon: Gift, 
-          position: { x: 20, y: 80 },
+          position: { x: 50, y: 75 },
           category: 'Crafting',
           difficulty: 'Hard',
           timeEstimate: '60 min',
@@ -387,7 +383,6 @@ const ConstellationToDoApp = () => {
       icon: Users,
       color: '#10b981',
       description: 'Connect and contribute',
-      position: { x: 15, y: 35 },
       category: 'Relationships',
       quests: [
         { 
@@ -395,7 +390,7 @@ const ConstellationToDoApp = () => {
           name: 'Call a friend or family', 
           exp: 40, 
           icon: Users, 
-          position: { x: 25, y: 20 },
+          position: { x: 30, y: 30 },
           category: 'Communication',
           difficulty: 'Easy',
           timeEstimate: '15 min',
@@ -406,7 +401,7 @@ const ConstellationToDoApp = () => {
           name: 'Help someone today', 
           exp: 50, 
           icon: Heart, 
-          position: { x: 10, y: 25 },
+          position: { x: 70, y: 30 },
           category: 'Service',
           difficulty: 'Medium',
           timeEstimate: '30 min',
@@ -417,7 +412,7 @@ const ConstellationToDoApp = () => {
           name: 'Give genuine compliment', 
           exp: 25, 
           icon: Star, 
-          position: { x: 5, y: 45 },
+          position: { x: 20, y: 60 },
           category: 'Kindness',
           difficulty: 'Easy',
           timeEstimate: '2 min',
@@ -428,7 +423,7 @@ const ConstellationToDoApp = () => {
           name: 'Engage in community activity', 
           exp: 60, 
           icon: Users, 
-          position: { x: 30, y: 45 },
+          position: { x: 80, y: 60 },
           category: 'Community',
           difficulty: 'Medium',
           timeEstimate: '60 min',
@@ -439,7 +434,7 @@ const ConstellationToDoApp = () => {
           name: 'Collaborate on team project', 
           exp: 55, 
           icon: Target, 
-          position: { x: 20, y: 25 },
+          position: { x: 50, y: 75 },
           category: 'Teamwork',
           difficulty: 'Medium',
           timeEstimate: '45 min',
@@ -458,7 +453,7 @@ const ConstellationToDoApp = () => {
     const finalUsername = username.trim() || 'Explorer';
     setPlayer(prev => ({ ...prev, name: finalUsername }));
     setGameStarted(true);
-    setMascotMessage(`Welcome ${finalUsername}! Let's start this amazing journey! 🚀`);
+    setMascotMessage(`Welcome ${finalUsername}! Let's start this amazing journey!`);
     setShowMascot(true);
     setTimeout(() => setShowMascot(false), 4000);
   };
@@ -803,7 +798,7 @@ const ConstellationToDoApp = () => {
           </div>
           
           <div className="text-sm sm:text-lg text-yellow-100 font-medium animate-pulse">
-            Amazing work, {player.name}! ⭐
+            Amazing work, {player.name}!
           </div>
         </div>
       </div>
@@ -1022,83 +1017,11 @@ const ConstellationToDoApp = () => {
     );
   };
 
-  // Constellation Map Component
-  
-    const allQuests = [];
-    
-    // Collect all quests from all constellations with their positions
-    Object.entries(constellations).forEach(([constKey, constellation]) => {
-      // Add constellation center
-      allQuests.push({
-        id: `constellation_${constKey}`,
-        name: constellation.name,
-        isConstellation: true,
-        constellation: constKey,
-        position: constellation.position,
-        icon: constellation.icon,
-        color: constellation.color,
-        category: constellation.category
-      });
-      
-      // Add constellation quests
-      constellation.quests.forEach(quest => {
-        allQuests.push({
-          ...quest,
-          constellation: constKey,
-          isConstellation: false
-        });
-      });
-    });
-
-    // Add custom quests
-    Object.entries(player.customQuests).forEach(([constKey, quests]) => {
-      quests.forEach(quest => {
-        allQuests.push({
-          ...quest,
-          constellation: constKey,
-          isConstellation: false
-        });
-      });
-    });
-
-  // Constellation Map Component
-  const ConstellationMap = () => {
-    const allQuests = [];
-    
-    // Collect all quests from all constellations with their positions
-    Object.entries(constellations).forEach(([constKey, constellation]) => {
-      // Add constellation center
-      allQuests.push({
-        id: `constellation_${constKey}`,
-        name: constellation.name,
-        isConstellation: true,
-        constellation: constKey,
-        position: constellation.position,
-        icon: constellation.icon,
-        color: constellation.color,
-        category: constellation.category
-      });
-      
-      // Add constellation quests
-      constellation.quests.forEach(quest => {
-        allQuests.push({
-          ...quest,
-          constellation: constKey,
-          isConstellation: false
-        });
-      });
-    });
-
-    // Add custom quests
-    Object.entries(player.customQuests).forEach(([constKey, quests]) => {
-      quests.forEach(quest => {
-        allQuests.push({
-          ...quest,
-          constellation: constKey,
-          isConstellation: false
-        });
-      });
-    });
+  // Constellation Map Component with Tabbed Interface
+  const ConstellationMap = ({ constellationKey }) => {
+    const constellation = constellations[constellationKey];
+    const customQuests = player.customQuests[constellationKey] || [];
+    const allQuests = [...constellation.quests, ...customQuests];
 
     return (
       <div className="relative w-full h-80 sm:h-96 md:h-[28rem] lg:h-[500px] bg-gradient-to-br from-slate-900/50 to-purple-900/50 rounded-2xl sm:rounded-3xl border border-white/10 overflow-hidden">
@@ -1118,160 +1041,136 @@ const ConstellationToDoApp = () => {
           />
         ))}
 
-        {/* Constellation connections */}
+        {/* Constellation center */}
+        <div 
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
+          style={{ left: '50%', top: '30%' }}
+        >
+          <div 
+            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full border-4 flex items-center justify-center shadow-2xl animate-pulse-glow"
+            style={{
+              backgroundColor: `${constellation.color}80`,
+              borderColor: constellation.color,
+              boxShadow: `0 0 30px ${constellation.color}40`
+            }}
+          >
+            <constellation.icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
+          </div>
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
+            <div className="text-sm sm:text-base font-bold text-white">{constellation.name}</div>
+            <div className="text-xs text-gray-300">{getConstellationProgress(constellationKey).completed}/{getConstellationProgress(constellationKey).total} completed</div>
+          </div>
+        </div>
+
+        {/* Quest connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-          <defs>
-            {/* Simple gradients for each constellation */}
-            {Object.entries(constellations).map(([constKey, constellation]) => (
-              <linearGradient key={`gradient-${constKey}`} id={`gradient-${constKey}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor={constellation.color} stopOpacity="0.3" />
-                <stop offset="100%" stopColor={constellation.color} stopOpacity="0.1" />
-              </linearGradient>
-            ))}
-          </defs>
-          
-          {/* Clean connections from constellation centers to their quests */}
-          {Object.entries(constellations).map(([constKey, constellation]) => 
-            constellation.quests.map(quest => {
-              const isCompleted = player.completedQuests.includes(quest.id);
-              
-              return (
-                <line
-                  key={`connection-${constKey}-${quest.id}`}
-                  x1={`${constellation.position.x}%`}
-                  y1={`${constellation.position.y}%`}
-                  x2={`${quest.position.x}%`}
-                  y2={`${quest.position.y}%`}
-                  stroke={isCompleted ? constellation.color : `url(#gradient-${constKey})`}
-                  strokeWidth={isCompleted ? "2" : "1"}
-                  style={{ 
-                    opacity: isCompleted ? 0.8 : 0.2,
-                    transition: 'all 0.3s ease-in-out'
-                  }}
-                />
-              );
-            })
-          )}
+          {allQuests.map(quest => {
+            const isCompleted = player.completedQuests.includes(quest.id);
+            return (
+              <line
+                key={`connection-${quest.id}`}
+                x1="50%"
+                y1="30%"
+                x2={`${quest.position.x}%`}
+                y2={`${quest.position.y}%`}
+                stroke={isCompleted ? constellation.color : `${constellation.color}40`}
+                strokeWidth={isCompleted ? "2" : "1"}
+                style={{ opacity: isCompleted ? 0.8 : 0.3 }}
+              />
+            );
+          })}
         </svg>
 
         {/* Quest nodes */}
         {allQuests.map((quest) => {
           const isCompleted = player.completedQuests.includes(quest.id);
-          const isConstellation = quest.isConstellation;
           const streak = player.streaks[quest.id] || 0;
           const hasComment = player.comments[quest.id];
 
           return (
             <div
               key={quest.id}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-20"
               style={{
                 left: `${quest.position.x}%`,
-                top: `${quest.position.y}%`,
-                zIndex: isConstellation ? 3 : 2
+                top: `${quest.position.y}%`
               }}
-              onClick={() => {
-                if (!isConstellation) {
-                  toggleQuest(quest.id);
-                } else {
-                  setActiveConstellation(quest.constellation);
-                }
-              }}
+              onClick={() => toggleQuest(quest.id)}
             >
               {/* Larger touch area for mobile */}
-              <div className="absolute inset-0 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 -translate-x-1/2 -translate-y-1/2 rounded-full" />
+              <div className="absolute inset-0 w-16 h-16 -translate-x-1/2 -translate-y-1/2 rounded-full" />
               
               {/* Node glow effect */}
               <div 
-                className={`absolute inset-0 rounded-full animate-pulse ${
-                  isConstellation ? 'w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24' : 'w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16'
-                }`}
+                className="absolute inset-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full animate-pulse"
                 style={{
-                  background: `radial-gradient(circle, ${quest.color || '#06b6d4'}40, transparent)`,
+                  background: `radial-gradient(circle, ${constellation.color}40, transparent)`,
                   transform: 'scale(2)',
                   opacity: isCompleted ? 0.8 : 0.4
                 }}
               />
               
-              {/* Main node - Made bigger for mobile */}
+              {/* Main node */}
               <div
                 className={`relative rounded-full border-2 sm:border-4 transition-all duration-300 hover:scale-110 flex items-center justify-center shadow-2xl ${
-                  isConstellation 
-                    ? 'w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-white/50' 
-                    : isCompleted 
-                      ? 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-green-400 bg-green-500/80' 
-                      : 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-white/40 bg-white/10 hover:bg-white/20'
+                  isCompleted 
+                    ? 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-green-400 bg-green-500/80' 
+                    : 'w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 border-white/40 bg-white/10 hover:bg-white/20'
                 }`}
                 style={{
-                  backgroundColor: isConstellation ? `${quest.color}80` : undefined,
-                  borderColor: isConstellation ? quest.color : undefined,
-                  boxShadow: `0 0 ${isConstellation ? '30px' : '20px'} ${quest.color || '#06b6d4'}40`
+                  borderColor: !isCompleted ? `${constellation.color}60` : undefined,
+                  boxShadow: `0 0 20px ${constellation.color}40`
                 }}
               >
-                {/* Icon - Made bigger */}
                 <quest.icon 
-                  className={`${isConstellation ? 'w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10' : 'w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7'} text-white`}
-                  style={{ 
-                    color: isCompleted && !isConstellation ? '#ffffff' : quest.color || '#ffffff'
-                  }}
+                  className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-white"
+                  style={{ color: isCompleted ? '#ffffff' : constellation.color }}
                 />
                 
-                {/* Completion checkmark - Made bigger */}
-                {isCompleted && !isConstellation && (
+                {/* Completion checkmark */}
+                {isCompleted && (
                   <div className="absolute -top-1 -right-1 sm:-top-1.5 sm:-right-1.5 w-4 h-4 sm:w-5 sm:h-5 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
                     <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
                 )}
                 
-                {/* Streak indicator - Made bigger */}
-                {streak > 0 && !isConstellation && (
+                {/* Streak indicator */}
+                {streak > 0 && (
                   <div className="absolute -bottom-1.5 -right-1.5 sm:-bottom-2 sm:-right-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full px-2 sm:px-2.5 py-1 sm:py-1.5 flex items-center gap-1 shadow-lg">
                     <Flame className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                     <span className="text-xs sm:text-sm font-bold text-white">{streak}</span>
                   </div>
                 )}
                 
-                {/* Comment indicator - Made bigger */}
-                {hasComment && !isConstellation && (
+                {/* Comment indicator */}
+                {hasComment && (
                   <div className="absolute -top-1.5 -left-1.5 sm:-top-2 sm:-left-2 w-4 h-4 sm:w-5 sm:h-5 bg-purple-500 rounded-full flex items-center justify-center">
                     <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
                 )}
               </div>
               
-              {/* Enhanced Tooltip with Quest Info */}
+              {/* Enhanced Tooltip */}
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
                 <div className="bg-black/95 backdrop-blur-md px-3 py-2 rounded-xl border border-white/30 text-center min-w-max shadow-2xl max-w-xs">
                   <div className="text-sm font-bold text-white">{quest.name}</div>
-                  {!isConstellation && (
-                    <>
-                      <div className="text-xs text-gray-300 mt-1 flex items-center justify-center gap-2">
-                        <span>+{quest.exp} XP</span>
-                        <span>•</span>
-                        <span>{isCompleted ? 'Completed' : 'Available'}</span>
-                      </div>
-                      {quest.category && (
-                        <div className="text-xs text-gray-400 mt-1 flex items-center justify-center gap-2">
-                          <span className={`px-2 py-0.5 rounded-full border ${getDifficultyColor(quest.difficulty)}`}>
-                            {quest.difficulty}
-                          </span>
-                          <span>•</span>
-                          <span>{quest.timeEstimate}</span>
-                        </div>
-                      )}
-                      {quest.category && (
-                        <div className="text-xs text-purple-300 mt-1">
-                          📂 {quest.category}
-                        </div>
-                      )}
-                    </>
+                  <div className="text-xs text-gray-300 mt-1 flex items-center justify-center gap-2">
+                    <span>+{quest.exp} XP</span>
+                    <span>•</span>
+                    <span>{isCompleted ? 'Completed' : 'Available'}</span>
+                  </div>
+                  {quest.category && (
+                    <div className="text-xs text-gray-400 mt-1 flex items-center justify-center gap-2">
+                      <span className={`px-2 py-0.5 rounded-full border ${getDifficultyColor(quest.difficulty)}`}>
+                        {quest.difficulty}
+                      </span>
+                      <span>•</span>
+                      <span>{quest.timeEstimate}</span>
+                    </div>
                   )}
-                  {isConstellation && (
-                    <div className="text-xs text-gray-300 mt-1">
-                      {getConstellationProgress(quest.constellation).completed}/{getConstellationProgress(quest.constellation).total} completed
-                      <div className="text-xs text-purple-300 mt-1">
-                        📂 {quest.category}
-                      </div>
+                  {quest.category && (
+                    <div className="text-xs text-purple-300 mt-1">
+                      {quest.category}
                     </div>
                   )}
                 </div>
@@ -1295,9 +1194,7 @@ const ConstellationToDoApp = () => {
           >
             <div 
               className="w-1 h-1 rounded-full"
-              style={{
-                backgroundColor: ['#06b6d4', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'][Math.floor(Math.random() * 5)]
-              }}
+              style={{ backgroundColor: constellation.color }}
             />
           </div>
         ))}
@@ -1375,7 +1272,7 @@ const ConstellationToDoApp = () => {
             </div>
             
             <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3 sm:mb-4">
-              ✨ Constellation Quest
+              Constellation Quest
             </h1>
             
             <p className="text-base sm:text-xl text-gray-300 max-w-xs sm:max-w-md mx-auto leading-relaxed px-4 mb-6 sm:mb-8">
@@ -1410,7 +1307,7 @@ const ConstellationToDoApp = () => {
                     {constellation.description}
                   </p>
                   <div className="text-xs text-gray-400">
-                    📂 {constellation.category}
+                    {constellation.category}
                   </div>
                   <div className="text-xs text-gray-500 mt-0.5">
                     {constellation.quests.length} quests
@@ -1442,7 +1339,7 @@ const ConstellationToDoApp = () => {
                     {constellation.description}
                   </p>
                   <div className="text-xs text-gray-400">
-                    📂 {constellation.category}
+                    {constellation.category}
                   </div>
                   <div className="text-xs text-gray-500 mt-0.5">
                     {constellation.quests.length} quests
@@ -1496,7 +1393,7 @@ const ConstellationToDoApp = () => {
     );
   }
 
-  // Main Game Component
+  // Main Game Component with Tabbed Interface
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white flex flex-col">
       {/* Header */}
@@ -1568,6 +1465,44 @@ const ConstellationToDoApp = () => {
         </div>
       </div>
 
+      {/* Constellation Tabs */}
+      <div className="bg-black/20 border-b border-white/10 p-2 sm:p-3">
+        <div className="flex gap-1 sm:gap-2 overflow-x-auto pb-2 scrollbar-hide">
+          {Object.entries(constellations).map(([key, constellation]) => {
+            const progress = getConstellationProgress(key);
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveConstellation(key)}
+                className={`flex-shrink-0 px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center gap-2 min-w-max ${
+                  activeConstellation === key 
+                    ? 'bg-white/20 text-white shadow-lg border border-white/30' 
+                    : 'bg-white/5 text-gray-300 hover:bg-white/10 border border-transparent'
+                }`}
+                style={{
+                  background: activeConstellation === key 
+                    ? `linear-gradient(135deg, ${constellation.color}30, ${constellation.color}10)` 
+                    : undefined,
+                  borderColor: activeConstellation === key ? `${constellation.color}50` : undefined
+                }}
+              >
+                <constellation.icon 
+                  className="w-4 h-4 sm:w-5 sm:h-5" 
+                  style={{ color: constellation.color }} 
+                />
+                <div className="text-left">
+                  <div className="font-medium text-xs sm:text-sm">{constellation.name}</div>
+                  <div className="text-xs text-gray-400">{progress.completed}/{progress.total}</div>
+                </div>
+                {progress.percentage === 100 && (
+                  <Trophy className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Mascot Speech Bubble */}
       {showMascot && gameStarted && (
         <div className="fixed top-16 sm:top-24 right-2 sm:right-4 z-40 animate-bounce">
@@ -1587,14 +1522,25 @@ const ConstellationToDoApp = () => {
         </div>
       )}
 
-      {/* Main Content - Constellation Map */}
+      {/* Main Content - Current Constellation */}
       <div className="flex-1 p-3 sm:p-4">
         <div className="mb-3 sm:mb-4 text-center">
-          <h2 className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2">Your Quest Constellation</h2>
-          <p className="text-gray-300 text-sm sm:text-base">Navigate the stars and complete your cosmic journey</p>
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
+            {React.createElement(constellations[activeConstellation].icon, {
+              className: "w-6 h-6 sm:w-8 sm:h-8",
+              style: { color: constellations[activeConstellation].color }
+            })}
+            <h2 className="text-lg sm:text-2xl font-bold" style={{ color: constellations[activeConstellation].color }}>
+              {constellations[activeConstellation].name} Constellation
+            </h2>
+          </div>
+          <p className="text-gray-300 text-sm sm:text-base">{constellations[activeConstellation].description}</p>
+          <div className="text-xs sm:text-sm text-gray-400 mt-1">
+            {constellations[activeConstellation].category} • {getConstellationProgress(activeConstellation).completed}/{getConstellationProgress(activeConstellation).total} completed
+          </div>
         </div>
         
-        <ConstellationMap />
+        <ConstellationMap constellationKey={activeConstellation} />
         
         <div className="mt-3 sm:mt-4 flex justify-center">
           <button
@@ -1755,7 +1701,7 @@ const ConstellationToDoApp = () => {
           overflow-x: hidden;
           height: 100vh;
           width: 100vw;
-          touch-action: manipulation; /* Prevents zoom on mobile */
+          touch-action: manipulation;
         }
         
         #root {
@@ -1763,7 +1709,6 @@ const ConstellationToDoApp = () => {
           width: 100vw;
         }
         
-        /* Improve touch targets on mobile */
         @media (max-width: 640px) {
           .cursor-pointer {
             min-height: 44px;
@@ -1771,7 +1716,6 @@ const ConstellationToDoApp = () => {
           }
         }
         
-        /* Better tap highlights */
         * {
           -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
           -webkit-touch-callout: none;
@@ -1797,16 +1741,6 @@ const ConstellationToDoApp = () => {
         @keyframes float-gentle {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-15px); }
-        }
-        
-        @keyframes orbit {
-          0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
-          100% { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
-        }
-        
-        @keyframes orbit-reverse {
-          0% { transform: rotate(0deg) translateX(25px) rotate(0deg); }
-          100% { transform: rotate(-360deg) translateX(25px) rotate(360deg); }
         }
         
         @keyframes glow {
@@ -1908,14 +1842,6 @@ const ConstellationToDoApp = () => {
         
         .animate-float-gentle {
           animation: float-gentle 4s ease-in-out infinite;
-        }
-        
-        .animate-orbit {
-          animation: orbit 8s linear infinite;
-        }
-        
-        .animate-orbit-reverse {
-          animation: orbit-reverse 10s linear infinite;
         }
         
         .animate-glow {
